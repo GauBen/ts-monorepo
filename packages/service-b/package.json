@@ -1,0 +1,19 @@
+{
+  "name": "service-b",
+  "dependencies": {
+    "lib-c": "workspace:^"
+  },
+  "devDependencies": {
+    "@tsconfig/node18-strictest-esm": "^1.0.1",
+    "tsx": "^3.10.1",
+    "typescript": "^4.8.4"
+  },
+  "packageManager": "yarn@4.0.0-rc.25",
+  "private": true,
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsx watch --conditions=development --clear-screen=false ./index.ts",
+    "start": "node ./build/index.js"
+  },
+  "type": "module"
+}

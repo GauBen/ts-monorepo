@@ -1,0 +1,13 @@
+{
+  "name": "ts-monorepo",
+  "packageManager": "yarn@4.0.0-rc.25",
+  "private": true,
+  "scripts": {
+    "build": "yarn workspaces foreach --topological-dev -pv run build",
+    "dev": "yarn workspaces foreach --topological-dev -piv run dev",
+    "start": "yarn workspaces foreach --topological-dev -piv run start"
+  },
+  "workspaces": [
+    "packages/*"
+  ]
+}
